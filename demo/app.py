@@ -137,7 +137,14 @@ def main():
             "Credit card (automatic)"
         ])
         monthly_charges = st.number_input("Phí hàng tháng ($)", 0.0, 200.0, 70.0, 0.5)
-        total_charges = st.number_input("Tổng phí ($)", 0.0, 10000.0, 1000.0, 10.0)
+        
+        # Tính tự động TotalCharges dựa trên tenure và monthly_charges
+        total_charges = tenure * monthly_charges
+        st.metric(
+            label="Tổng phí ($)", 
+            value=f"${total_charges:,.2f}",
+            help="Tự động tính = Thời gian sử dụng × Phí hàng tháng"
+        )
     
     # Nút dự đoán
     st.markdown("---")

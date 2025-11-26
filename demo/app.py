@@ -40,14 +40,18 @@ st.markdown("""
     .churn-high {
         background-color: #ffcccc;
         border: 2px solid #ff0000;
+        color: #800000;
     }
     .churn-medium {
         background-color: #fff4cc;
         border: 2px solid #ffa500;
+        color: #800000;
+
     }
     .churn-low {
         background-color: #ccffcc;
         border: 2px solid #00cc00;
+        color: #006600;
     }
     </style>
 """, unsafe_allow_html=True)

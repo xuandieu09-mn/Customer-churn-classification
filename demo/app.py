@@ -60,7 +60,7 @@ st.markdown("""
 @st.cache_resource
 def load_models():
     """Tải mô hình, scaler và feature columns (cache để tăng tốc)"""
-    model_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'best_rf_model.pkl')
+    model_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'logistic_model.pkl')
     scaler_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'scaler.pkl')
     feature_cols_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'feature_columns.pkl')
     
@@ -92,9 +92,9 @@ def main():
         
         **Phương pháp:** CRISP-DM
         
-        **Mô hình:** Random Forest (Optimized)
+        **Mô hình:** Logistic Regression (Best Model)
         
-        **Độ chính xác:** F1 Score = 0.68
+        **Độ chính xác:** F1 Score = 0.62, Accuracy = 0.81
         """)
         
         st.markdown("---")
